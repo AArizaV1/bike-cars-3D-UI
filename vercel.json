@@ -1,18 +1,15 @@
 {
-    "builds": [
-        {
-            "src": "handler.py",
-            "use": "@vercel/python"
-        }
-    ],
+    "runtime": "python3.9",
+    "functions": {
+      "api/handler.py": {
+        "runtime": "python3.9"
+      }
+    },
     "routes": [
-        {
-            "src": "/static/(.*)",
-            "dest": "/static/$1"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "handler.py"
-        }
+      {
+        "src": "/.*",
+        "dest": "api/handler.py"
+      }
     ]
-}
+  }
+  
