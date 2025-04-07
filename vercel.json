@@ -1,0 +1,16 @@
+{
+    "framework": "flask",
+    "python": {
+        "version": "3.x"
+    },
+    "routes": [
+        {
+            "src": "/static/(.*)",
+            "dest": "/static/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "app.py"
+        }
+    ]
+}
