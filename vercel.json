@@ -1,8 +1,5 @@
 {
     "framework": "flask",
-    "python": {
-        "version": "3.x"
-    },
     "routes": [
         {
             "src": "/static/(.*)",
